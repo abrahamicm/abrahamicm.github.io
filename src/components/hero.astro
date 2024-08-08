@@ -1,6 +1,6 @@
 ---
 import { Picture } from "astro:assets";
-import heroImage from "assets/hero.png";
+import heroImage from "assets/hero.webp";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon/components";
 ---
@@ -10,22 +10,21 @@ import { Icon } from "astro-icon/components";
   <div class="py-6 md:order-1 hidden md:block">
     <Picture
       src={heroImage}
-      alt="Astronaut in the air"
+      alt="Abraham Cordero foto"
       widths={[200, 400, 600]}
       sizes="(max-width: 800px) 100vw, 620px"
       loading="eager"
       format="avif"
+      style="border-radius:50%"
     />
   </div>
   <div>
     <h1
       class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Marketing website done with Astro
+      Abraham
     </h1>
     <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Astroship is a starter template for startups, marketing websites & landing
-      pages.<wbr /> Built with Astro.build and TailwindCSS. You can quickly
-      create any website with this starter.
+      Soy un programador web con más de 7 años de experiencia en el desarrollo de aplicaciones y sitios web. Mi trayectoria incluye la creación de soluciones tecnológicas para ecommerce, sistemas de gestión, y aplicaciones web personalizadas, utilizando tecnologías como Laravel, WordPress, jQuery, y más
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
       <Link

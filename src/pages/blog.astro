@@ -5,12 +5,12 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 
-// Filter blog entries with 'draft: false' & date before current date
+// Filtrar entradas del blog con 'draft: false' y fecha anterior a la fecha actual
 const publishedBlogEntries = await getCollection("blog", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
-// Sort content entries by publication date
+// Ordenar entradas de contenido por fecha de publicación
 publishedBlogEntries.sort(function (a, b) {
   return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
 });
@@ -19,9 +19,9 @@ publishedBlogEntries.sort(function (a, b) {
 <Layout title="Blog">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Our Blog</Fragment>
+      <Fragment slot="title">Nuestro Blog</Fragment>
       <Fragment slot="desc">
-        We write about building startups and thoughts going on our mind.
+        Escribimos sobre la creación de startups y nuestros pensamientos.
       </Fragment>
     </Sectionhead>
     <main class="mt-16">

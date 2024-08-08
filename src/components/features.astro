@@ -4,39 +4,39 @@ import { Icon } from "astro-icon/components";
 
 const features = [
   {
-    title: "Bring Your Own Framework",
+    title: "Asesoría Personalizada",
     description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
+      "Ofrecemos asesoría a medida para ayudarte a resolver problemas específicos en tus proyectos de programación.",
     icon: "bx:bxs-briefcase",
   },
   {
-    title: "100% Static HTML, No JS",
+    title: "Clases Interactivas",
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
+      "Nuestras clases están diseñadas para ser interactivas y prácticas, permitiendo un aprendizaje efectivo y aplicado.",
     icon: "bx:bxs-window-alt",
   },
   {
-    title: "On-Demand Components",
+    title: "Material Didáctico Completo",
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
+      "Proporcionamos material de estudio completo, incluyendo guías, ejercicios y recursos adicionales para un aprendizaje óptimo.",
     icon: "bx:bxs-data",
   },
   {
-    title: "Broad Integration",
+    title: "Soporte Continuo",
     description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
+      "Ofrecemos soporte continuo a través de consultas ilimitadas por email y video, para asegurar que puedas resolver cualquier duda.",
     icon: "bx:bxs-bot",
   },
   {
-    title: "SEO Enabled",
+    title: "Certificación",
     description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
+      "Al completar nuestro curso, recibirás una certificación de finalización que valida tus nuevos conocimientos y habilidades.",
     icon: "bx:bxs-file-find",
   },
   {
-    title: "Community",
+    title: "Asesoría Experta",
     description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
+      "Contamos con un equipo de asesores con amplia experiencia en programación y tecnología para ofrecerte la mejor orientación.",
     icon: "bx:bxs-user",
   },
 ];
@@ -44,11 +44,10 @@ const features = [
 
 <div class="mt-16 md:mt-0">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
+    Todo lo que necesitas para mejorar tus habilidades en programación
   </h2>
   <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
+    Nuestros servicios están diseñados para brindarte un aprendizaje efectivo y personalizado en programación.
   </p>
 </div>
 
@@ -56,11 +55,11 @@ const features = [
   {
     features.map((item) => (
       <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+        <div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
           <Icon class="text-white" name={item.icon} />
         </div>
         <div>
-          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <h3 class="font-semibold text-lg">{item.title}</h3>
           <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
         </div>
       </div>
