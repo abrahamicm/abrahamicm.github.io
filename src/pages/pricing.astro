@@ -4,19 +4,20 @@ import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import PricingCard from "@components/pricing.astro";
 
-const pricing = [
+const advisoryPricing = [
   {
     name: "Asesoría Básica",
-    price: "$5",
+    price: "$5/hora",
     popular: false,
     features: [
-      "1 Hora de Asesoría",
-      "Consultas por Email",
-      "Soporte Básico",
+      "Asesoría personalizada por hora",
+      "Planificación de proyectos",
+      "Definición de tecnologías",
+      "Planes de trabajo",
     ],
     button: {
-      text: "Empezar",
-      link: "#",
+      text: "Solicita una Consulta",
+      link: "#contact",
     },
   },
   {
@@ -30,39 +31,80 @@ const pricing = [
       "Material Adicional",
     ],
     button: {
-      text: "Empezar",
-      link: "#",
+      text: "Solicita una Consulta",
+      link: "#contact",
+    },
+  },
+];
+
+const systemPricing = [
+  {
+    name: "Elaboración de Sistemas - Plan 1",
+    price: "$200",
+    popular: false,
+    features: [
+      "Autenticación integrada",
+      "4 módulos gestionables",
+      "Roles y permisos configurables",
+      "No incluye alojamiento",
+    ],
+    button: {
+      text: "Solicita más Información",
+      link: "#contact",
     },
   },
   {
-    name: "Curso Completo",
-    price: "$30",
-    popular: false,
+    name: "Elaboración de Sistemas - Plan 2",
+    price: "$400",
+    popular: true,
     features: [
-      "10 Horas de Clases",
-      "Consultas Ilimitadas",
-      "Material de Estudio Completo",
-      "Certificación de Finalización",
+      "Autenticación integrada",
+      "10 módulos gestionables",
+      "Roles y permisos configurables",
+      "No incluye alojamiento",
     ],
     button: {
-      text: "Contact us",
-      link: "/contact",
+      text: "Solicita más Información",
+      link: "#contact",
+    },
+  },
+  {
+    name: "Elaboración de Sistemas - Plan 3",
+    price: "A convenir",
+    popular: false,
+    features: [
+      "Características personalizadas a convenir",
+      "Basado en las necesidades del cliente",
+      "Incluye autenticación y módulos gestionables",
+    ],
+    button: {
+      text: "Solicita una Cotización",
+      link: "#contact",
     },
   },
 ];
 ---
-
-<Layout title="Pricing">
+<Layout title="Precios">
   <Container>
     <Sectionhead>
       <Fragment slot="title">Precios</Fragment>
       <Fragment slot="desc">
-        Precios claros y accesibles para nuestras asesorías y clases de programación.
+        Encuentra los planes que mejor se adaptan a tus necesidades de desarrollo y asesoría.
       </Fragment>
     </Sectionhead>
 
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
-      {pricing.map((item) => <PricingCard plan={item} />)}
-    </div>
+    <section class="mt-16">
+      <h2 class="text-3xl font-semibold mb-6">Precios de Asesorías</h2>
+      <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-screen-lg">
+        {advisoryPricing.map((item) => <PricingCard plan={item} />)}
+      </div>
+    </section>
+
+    <section class="mt-16">
+      <h2 class="text-3xl font-semibold mb-6">Precios de Elaboración de Sistemas</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mx-auto max-w-screen-lg">
+        {systemPricing.map((item) => <PricingCard plan={item} />)}
+      </div>
+    </section>
   </Container>
 </Layout>

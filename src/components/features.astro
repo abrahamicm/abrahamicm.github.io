@@ -2,67 +2,91 @@
 // @ts-ignore
 import { Icon } from "astro-icon/components";
 
-const features = [
+const systemFeatures = [
+
   {
-    title: "Asesoría Personalizada",
+    title: "Plan 1 - $200",
     description:
-      "Ofrecemos asesoría a medida para ayudarte a resolver problemas específicos en tus proyectos de programación.",
+      "Incluye autenticación, 4 módulos gestionables, roles y permisos. Ideal para proyectos pequeños o medianos. No incluye alojamiento.",
+    icon: "bx:bxs-package",
+  },
+  {
+    title: "Plan 2 - $400",
+    description:
+      "Incluye autenticación, 10 módulos gestionables, roles y permisos. Una solución más robusta para proyectos más grandes. No incluye alojamiento.",
+    icon: "bx:bxs-layer",
+  },
+  {
+    title: "Plan 3 - Precio a Convenir",
+    description:
+      "Elaboramos sistemas con características adicionales según las necesidades del cliente. Contáctanos para una cotización personalizada.",
+    icon: "bx:bxs-customize",
+  },
+];
+
+const advisoryFeatures = [
+  {
+    title: "Asesoría Personalizada - $5/hora",
+    description:
+      "Ofrecemos asesoría experta en planificación de proyectos, definición de tecnologías, y creación de planes de trabajo.",
     icon: "bx:bxs-briefcase",
-  },
-  {
-    title: "Clases Interactivas",
-    description:
-      "Nuestras clases están diseñadas para ser interactivas y prácticas, permitiendo un aprendizaje efectivo y aplicado.",
-    icon: "bx:bxs-window-alt",
-  },
-  {
-    title: "Material Didáctico Completo",
-    description:
-      "Proporcionamos material de estudio completo, incluyendo guías, ejercicios y recursos adicionales para un aprendizaje óptimo.",
-    icon: "bx:bxs-data",
   },
   {
     title: "Soporte Continuo",
     description:
-      "Ofrecemos soporte continuo a través de consultas ilimitadas por email y video, para asegurar que puedas resolver cualquier duda.",
-    icon: "bx:bxs-bot",
-  },
-  {
-    title: "Certificación",
-    description:
-      "Al completar nuestro curso, recibirás una certificación de finalización que valida tus nuevos conocimientos y habilidades.",
-    icon: "bx:bxs-file-find",
-  },
-  {
-    title: "Asesoría Experta",
-    description:
-      "Contamos con un equipo de asesores con amplia experiencia en programación y tecnología para ofrecerte la mejor orientación.",
-    icon: "bx:bxs-user",
+      "Te acompañamos durante todo el proceso con soporte continuo, respondiendo a tus consultas y resolviendo tus dudas.",
+    icon: "bx:bxs-chat",
   },
 ];
+
 ---
 
 <div class="mt-16 md:mt-0">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Todo lo que necesitas para mejorar tus habilidades en programación
+    Servicios a la Medida de tus Necesidades
   </h2>
   <p class="text-lg mt-4 text-slate-600">
-    Nuestros servicios están diseñados para brindarte un aprendizaje efectivo y personalizado en programación.
+    Ofrecemos soluciones personalizadas en desarrollo de sistemas y asesoría en programación y tecnología.
   </p>
 </div>
 
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
-  {
-    features.map((item) => (
-      <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
-          <Icon class="text-white" name={item.icon} />
+<section class="mt-16">
+  <h3 class="text-3xl font-semibold mb-6">Elaboración de Sistemas a Medida</h3>
+  <p class="text-lg mt-4 text-slate-600 mb-4">
+    Desarrollamos sistemas personalizados con autenticación, módulos gestionables, roles y permisos, adaptados a tus necesidades específicas.
+  </p>
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-16">
+    {
+      systemFeatures.map((item) => (
+        <div class="flex gap-4 items-start">
+          <div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
+            <Icon class="text-white" name={item.icon} />
+          </div>
+          <div>
+            <h4 class="font-semibold text-lg">{item.title}</h4>
+            <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          </div>
         </div>
-        <div>
-          <h3 class="font-semibold text-lg">{item.title}</h3>
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+      ))
+    }
+  </div>
+</section>
+
+<section class="mt-16">
+  <h3 class="text-3xl font-semibold mb-6">Asesorías</h3>
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-16">
+    {
+      advisoryFeatures.map((item) => (
+        <div class="flex gap-4 items-start">
+          <div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
+            <Icon class="text-white" name={item.icon} />
+          </div>
+          <div>
+            <h4 class="font-semibold text-lg">{item.title}</h4>
+            <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          </div>
         </div>
-      </div>
-    ))
-  }
-</div>
+      ))
+    }
+  </div>
+</section>

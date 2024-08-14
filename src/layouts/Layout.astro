@@ -19,8 +19,9 @@ const resolvedImageWithDomain = new URL(
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Asesorías y Clases de Programación"
-  : "Asesorías y Clases de Programación - Mejora tus habilidades en programación";
+  ? title + " | " + "Servicios de Programación a Medida"
+  : "Servicios de Programación a Medida - Potencia tus proyectos y habilidades";
+
 
 ---
 
@@ -93,5 +94,19 @@ const makeTitle = title
         content-visibility: auto;
       }
     </style>
+
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/66bcd4fa146b7af4a43a6be5/1i58pvsv6';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
   </body>
 </html>
