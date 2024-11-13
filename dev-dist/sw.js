@@ -67,7 +67,7 @@ if (!self.define) {
     });
   };
 }
-define(['./workbox-99d8380f'], (function (workbox) { 'use strict';
+define(['./workbox-c6c6fb7c'], (function (workbox) { 'use strict';
 
   self.addEventListener('message', event => {
     if (event.data && event.data.type === 'SKIP_WAITING') {
@@ -82,7 +82,7 @@ define(['./workbox-99d8380f'], (function (workbox) { 'use strict';
    */
   workbox.precacheAndRoute([{
     "url": "/",
-    "revision": "0.d51gq8m95l8"
+    "revision": "0.st0s6odeuag"
   }], {
     "directoryIndex": "index.html"
   });
