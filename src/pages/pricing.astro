@@ -17,7 +17,7 @@ const advisoryPricing = [
     ],
     button: {
       text: "Solicita una Consulta",
-      link: "#contact",
+      link: "https://www.instagram.com/abprogramador",
     },
   },
   {
@@ -32,7 +32,7 @@ const advisoryPricing = [
     ],
     button: {
       text: "Solicita una Consulta",
-      link: "#contact",
+      link: "https://www.instagram.com/abprogramador",
     },
   },
 ];
@@ -50,7 +50,7 @@ const systemPricing = [
     ],
     button: {
       text: "Solicita más Información",
-      link: "#contact",
+      link: "https://www.instagram.com/abprogramador",
     },
   },
   {
@@ -65,7 +65,7 @@ const systemPricing = [
     ],
     button: {
       text: "Solicita más Información",
-      link: "#contact",
+      link: "https://www.instagram.com/abprogramador",
     },
   },
   {
@@ -79,17 +79,19 @@ const systemPricing = [
     ],
     button: {
       text: "Solicita una Cotización",
-      link: "#contact",
+      link: "https://www.instagram.com/abprogramador",
     },
   },
 ];
 ---
+
 <Layout title="Precios">
   <Container>
     <Sectionhead>
       <Fragment slot="title">Precios</Fragment>
       <Fragment slot="desc">
-        Encuentra los planes que mejor se adaptan a tus necesidades de desarrollo y asesoría.
+        Encuentra los planes que mejor se adaptan a tus necesidades de
+        desarrollo y asesoría.
       </Fragment>
     </Sectionhead>
 
@@ -101,8 +103,11 @@ const systemPricing = [
     </section>
 
     <section class="mt-16">
-      <h2 class="text-3xl font-semibold mb-6">Precios de Elaboración de Sistemas</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mx-auto max-w-screen-lg">
+      <h2 class="text-3xl font-semibold mb-6">
+        Precios de Elaboración de Sistemas
+      </h2>
+      <div
+        class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mx-auto max-w-screen-lg">
         {systemPricing.map((item) => <PricingCard plan={item} />)}
       </div>
     </section>

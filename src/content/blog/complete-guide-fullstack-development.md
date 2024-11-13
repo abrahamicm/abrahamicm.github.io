@@ -12,9 +12,6 @@ author: "Abraham Cordero"
 tags: [webdev, tailwindcss, frontend]
 ---
 
-Claro, aquí está el contenido en español en formato Markdown:
-
----
 
 # La Guía Completa del Desarrollo Web Full Stack
 
@@ -45,7 +42,3 @@ El desarrollo web full stack implica trabajar con diferentes tecnologías y herr
 - **Comunidades:** Únete a foros y grupos de desarrolladores para compartir conocimientos y resolver dudas.
 
 Con esta guía, tienes una base sólida para comenzar tu camino en el desarrollo web full stack. ¡Buena suerte!
-
----
-
-¿Necesitas algún otro ajuste o contenido adicional?

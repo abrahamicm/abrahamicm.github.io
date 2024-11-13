@@ -51,5 +51,4 @@ Comprender y utilizar correctamente las estructuras de datos y algoritmos te per
 
 Esta introducción te proporciona una base sólida para comenzar a explorar y dominar las estructuras de datos y algoritmos. ¡Empieza a practicar y mejora tus habilidades de programación!
 
----
 
