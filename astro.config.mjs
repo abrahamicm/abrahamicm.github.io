@@ -3,13 +3,17 @@ import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import icon from "astro-icon";
-import AstroPWA from '@vite-pwa/astro'
+import AstroPWA from '@vite-pwa/astro';
+
 export default defineConfig({
-
-
-  site: "https://abraham-cordero.pages.dev/",
+  site: "https://abrahamicm.github.io/",
+  base: "/abrahamicm.github.io/", // Nombre del repo en GitHub Pages
+  output: "static", // Necesario para GitHub Pages
+  build: {
+    outDir: "docs" // Cambia la carpeta de salida de dist a docs
+  },
   integrations: [tailwind(), mdx(), sitemap(), icon(), AstroPWA({
-    mode: 'development',
+    mode: 'production',
     base: '/',
     scope: '/',
     includeAssets: ['favicon.svg'],
@@ -44,5 +48,5 @@ export default defineConfig({
       enabled: true,
       navigateFallbackAllowlist: [/^\/$/],
     },
-  }),],
+  })],
 });
